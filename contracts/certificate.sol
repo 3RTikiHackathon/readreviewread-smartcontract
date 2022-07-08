@@ -20,7 +20,7 @@ contract Certificate is Ownable, ERC1155Supply {
 
     }
     function uri(uint _tokenId) override public view returns (string memory){
-        
+
         return (
             string(abi.encodePacked(baseUri, Strings.toHexString(_tokenId, 64), '.json'))
         );
